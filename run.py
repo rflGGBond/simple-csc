@@ -5,7 +5,36 @@ import datetime
 import os
 
 from lmcsc import LMCorrector
+import torch
 
+# def safe_forward(lm_corrector, batch, decode_prefix, prompt_split, max_retries=3):
+#     retry_batch = batch.copy()
+#     for retry in range(max_retries):
+#         try:
+#             outputs = lm_corrector(
+#                 retry_batch,
+#                 [decode_prefix] * len(retry_batch),
+#                 prompt_split=prompt_split
+#             )
+#             return outputs, retry_batch
+#         except RuntimeError as e:
+#             if "out of memory" in str(e).lower():
+#                 print(f"[WARNING] OOM detected! batch size={len(retry_batch)}, retry={retry + 1}")
+#                 torch.cuda.empty_cache()
+
+#                 if len(retry_batch) == 1:
+#                     print("[ERROR] Single sentence still OOM. Skipping.")
+#                     return None, retry_batch
+
+#                 # 缩小 batch（减半）
+#                 retry_batch = retry_batch[: len(retry_batch) // 2]
+#                 print(f"[ACTION] Reduced batch size to {len(retry_batch)}")
+#                 continue
+#             else:
+#                 raise e
+
+#     print("[ERROR] Max retries reached. Skipping batch.")
+#     return None, retry_batch
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -91,6 +120,7 @@ if __name__ == "__main__":
     print(f"Decode Prefix: {repr(args.decode_prefix)}")
     print(f"Prefix Split:   {repr(args.prefix_split)}")
     args.output_file = f"{args.path}/prediction.txt"
+    print(args.path)
     os.makedirs(args.path, exist_ok=True)
 
     sources = []

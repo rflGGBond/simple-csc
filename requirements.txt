@@ -1,13 +1,10 @@
 pypinyin
 pypinyin-dict
-torch>=2.0.1
 transformers>=4.27.0,<=4.43.2
 sentencepiece
-xformers==0.0.21
-numpy==1.24.4
+xformers==0.0.28.post3
 accelerate
 bitsandbytes
-modelscope
 opencc-python-reimplemented
 streamlit
 uvicorn
