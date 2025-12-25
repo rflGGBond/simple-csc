@@ -1,4 +1,3 @@
-
 transformation_type_paths:
   similar_shape_dict: "data/similar_shape_dict.json"
   shape_confusion_dict: "data/shape_confusion_dict.json"

@@ -6,6 +6,18 @@ from lmcsc.common import HALF_MIN, MIN
 from lmcsc.obversation_generator import NextObversationGenerator
 from lmcsc.generation import distortion_probs_to_cuda
 from lmcsc.corrector import LMCorrector
+# from final_lmcsc.common import HALF_MIN, MIN
+# from final_lmcsc.obversation_generator import NextObversationGenerator
+# from final_lmcsc.generation import distortion_probs_to_cuda
+# from final_lmcsc.corrector import LMCorrector
+# from crf_lmcsc.common import HALF_MIN, MIN
+# from crf_lmcsc.obversation_generator import NextObversationGenerator
+# from crf_lmcsc.generation import distortion_probs_to_cuda
+# from crf_lmcsc.corrector import LMCorrector
+# from cp_lmcsc.common import HALF_MIN, MIN
+# from cp_lmcsc.obversation_generator import NextObversationGenerator
+# from cp_lmcsc.generation import distortion_probs_to_cuda
+# from cp_lmcsc.corrector import LMCorrector
 
 
 def get_score(src, pred, model, log_probs, enthopies, labels, vocab_size):

@@ -9,9 +9,7 @@ from pypinyin_dict.phrase_pinyin_data import large_pinyin
 import json
 from tqdm import tqdm
 
-from lmcsc.common import PUNCT, OOV_CHAR, consonant_inits, reAlNUM
-
-# from keyboard_similarity_integration import TransformationTypeAdapter
+from final_lmcsc.common import PUNCT, OOV_CHAR, consonant_inits, reAlNUM
 
 
 # load better pinyin data

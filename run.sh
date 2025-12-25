@@ -18,7 +18,7 @@ set -o pipefail
     echo "alpha:                   ${alpha:=2.5}"
     echo "temperature:             ${temperature:=1.5}"
     echo "use_faithfulness_reward: ${use_faithfulness_reward:=true}"
-    echo "use_chat_prompted_model: ${use_chat_prompted_model:=true}"
+    echo "use_chat_prompted_model: ${use_chat_prompted_model:=false}"
     echo "prob_smooth:             ${prob_smooth:=-15.0}"
     echo "prefix_split:            ${prefix_split:=$'\n'}"
     echo "model:                   ${model:=../autodl-tmp/Qwen2.5-7B-Base}"
@@ -65,10 +65,10 @@ set -o pipefail
         # "lemon_v2/new.txt"
         # "lemon_v2/nov.txt"
         # "mcsc/test.txt"
-        # "cscd_ime/test.txt"
+        "cscd_ime/test.txt"
         # "cscd_ime/dev.txt"
         # "c2ec/dev.txt"
-        "c2ec/test.txt"
+        # "c2ec/test.txt"
     )
 
 

@@ -5,10 +5,17 @@ from typing import List
 import os
 import torch
 from lmcsc import LMCorrector
+# from final_lmcsc import LMCorrector
+# from crf_lmcsc import LMCorrector
+# from cp_lmcsc import LMCorrector
 
 
 from lmcsc.obversation_generator import NextObversationGenerator
+# from final_lmcsc.obversation_generator import NextObversationGenerator
+# from cp_lmcsc.obversation_generator import NextObversationGenerator
 from lmcsc.utils import clean_sentences, measure_cuda_memory
+# from final_lmcsc.utils import clean_sentences, measure_cuda_memory
+# from cp_lmcsc.utils import clean_sentences, measure_cuda_memory
 
 def run_model(model, 
               src: List[str], 
